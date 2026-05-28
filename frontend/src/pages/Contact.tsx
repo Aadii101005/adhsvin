@@ -3,8 +3,8 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 
 const Contact = () => {
   return (
-    <div className="w-full bg-[#F7F7F5] min-h-screen text-[#1F2937] pt-32 pb-16">
-      <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <div className="w-full bg-[#F7F7F5] min-h-screen text-[#1F2937] pt-28 sm:pt-32 pb-16">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -15,11 +15,11 @@ const Contact = () => {
             <span className="text-[#D32F2F] text-xs font-bold tracking-widest uppercase">Contact Us</span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold leading-[1.1] mb-8 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] mb-8 tracking-tight">
             Let's talk.
           </h1>
           
-          <p className="text-lg text-[#6B7280] mb-12 leading-relaxed font-light max-w-md">
+          <p className="text-base sm:text-lg text-[#6B7280] mb-10 md:mb-12 leading-relaxed font-light max-w-md">
             Whether you are looking to place a bulk order, request samples for your clinic, or just learn more about our technology.
           </p>
 
@@ -52,7 +52,7 @@ const Contact = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#F3F4F6]"
+          className="bg-white rounded-[1.5rem] md:rounded-[2rem] p-6 sm:p-8 md:p-10 shadow-sm border border-[#F3F4F6]"
         >
           <h3 className="text-2xl font-bold mb-6">Send a message</h3>
           <form className="space-y-6">

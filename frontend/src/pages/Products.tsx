@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ShoppingBag, Star, ArrowRight } from 'lucide-react'
+import { ShoppingBag, Star } from 'lucide-react'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../redux/slices/cartSlice'
 import { toast } from 'sonner'
@@ -26,9 +26,9 @@ const Products = () => {
   const filteredProducts = filter === 'All' ? PRODUCTS : PRODUCTS.filter(p => p.category === filter)
 
   return (
-    <div className="pt-32 pb-24 min-h-screen bg-[#F7F7F5] text-[#1F2937]">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+    <div className="pt-28 sm:pt-32 pb-20 md:pb-24 min-h-screen bg-[#F7F7F5] text-[#1F2937]">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-10 md:mb-12 gap-6">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,9 +37,9 @@ const Products = () => {
               <div className="h-px w-12 bg-[#D32F2F]"></div>
               <span className="text-[#D32F2F] text-xs font-bold tracking-widest uppercase">Our Products</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Shop adhsv.</h1>
-            <p className="text-[#6B7280] max-w-xl text-lg font-light">Advanced hydrogel solutions for every healing need. Developed by biotech experts.</p>
-            <div className="mt-8 rounded-[2rem] overflow-hidden border border-[#E5E7EB] bg-white shadow-xl max-w-xs">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4 tracking-tight">Shop adhsv.</h1>
+            <p className="text-[#6B7280] max-w-xl text-base sm:text-lg font-light">Advanced hydrogel solutions for every healing need. Developed by biotech experts.</p>
+            <div className="mt-8 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-[#E5E7EB] bg-white shadow-xl max-w-xs">
               <img src={Adhsv5Img} alt="ADHSV featured product" className="w-full object-cover" />
             </div>
           </motion.div>
@@ -64,16 +64,16 @@ const Products = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white rounded-[2rem] overflow-hidden border border-[#F3F4F6] shadow-sm hover:shadow-xl transition-all group flex flex-col"
+              className="bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-[#F3F4F6] shadow-sm hover:shadow-xl transition-all group flex flex-col"
             >
-              <Link to={`/products/${product.id}`} className="block relative h-80 overflow-hidden bg-[#F7F7F5] p-8 flex items-center justify-center">
+              <Link to={`/products/${product.id}`} className="block relative h-64 sm:h-80 overflow-hidden bg-[#F7F7F5] p-6 sm:p-8 flex items-center justify-center">
                 <img src={product.image} alt={product.name} className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply" />
                 <div className="absolute top-6 left-6 bg-white px-4 py-1.5 rounded-full text-xs font-bold text-[#1F2937] shadow-sm">
                   {product.category}
                 </div>
               </Link>
               
-              <div className="p-8 flex-1 flex flex-col justify-between">
+              <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-1 text-[#D32F2F] mb-3">
                     <Star className="w-4 h-4 fill-current" />

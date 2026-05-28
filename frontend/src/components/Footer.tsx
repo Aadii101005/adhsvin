@@ -4,8 +4,8 @@ import logo from '../utils/images/adhsv.png'
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
-      <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-slate-900 text-slate-300 py-10 md:py-12 border-t border-slate-800">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div className="col-span-1 md:col-span-1">
           <Link to="/" className="flex items-center h-10 w-40 relative mb-6 bg-white rounded-md overflow-hidden">
             <img src={logo} alt="ADHSV Logo" className="absolute top-1/2 left-0 w-full h-auto -translate-y-1/2 pointer-events-none" />

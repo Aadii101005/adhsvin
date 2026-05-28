@@ -17,18 +17,18 @@ const Checkout = () => {
   }
 
   return (
-    <div className="pt-28 pb-16 min-h-screen bg-slate-50">
-      <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+    <div className="pt-24 sm:pt-28 pb-16 min-h-screen bg-slate-50">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12 max-w-4xl">
         <h1 className="text-3xl font-bold font-heading mb-8">Checkout</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2 bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+          <div className="md:col-span-2 bg-white p-5 sm:p-8 rounded-2xl md:rounded-3xl border border-slate-100 shadow-sm">
             <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
               <CheckCircle2 className="text-primary" /> Shipping Information
             </h2>
             
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1">First Name</label>
                   <input type="text" required className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
@@ -44,7 +44,7 @@ const Checkout = () => {
                 <input type="text" required className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
               </div>
               
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1">City</label>
                   <input type="text" required className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
@@ -64,7 +64,7 @@ const Checkout = () => {
                 <input type="text" placeholder="0000 0000 0000 0000" className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
               </div>
               
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1">Expiry Date</label>
                   <input type="text" placeholder="MM/YY" className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
@@ -81,7 +81,7 @@ const Checkout = () => {
             </form>
           </div>
           
-          <div className="bg-slate-900 text-white p-8 rounded-3xl h-fit">
+          <div className="bg-slate-900 text-white p-5 sm:p-8 rounded-2xl md:rounded-3xl h-fit">
             <h3 className="text-xl font-bold mb-6">Order Summary</h3>
             <div className="flex justify-between mb-4 text-slate-300">
               <span>Total Amount</span>

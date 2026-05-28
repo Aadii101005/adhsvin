@@ -9,8 +9,8 @@ const Science = () => {
   ]
 
   return (
-    <div className="w-full bg-[#F7F7F5] min-h-screen text-[#1F2937] pt-32 pb-24">
-      <div className="container mx-auto px-6 md:px-12">
+    <div className="w-full bg-[#F7F7F5] min-h-screen text-[#1F2937] pt-28 sm:pt-32 pb-20 md:pb-24">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -22,11 +22,11 @@ const Science = () => {
             <span className="text-[#D32F2F] text-xs font-bold tracking-widest uppercase">The Science</span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold leading-[1.1] mb-8 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] mb-6 md:mb-8 tracking-tight">
             The Future of Sustainable Wound Care
           </h1>
           
-          <p className="text-lg md:text-xl text-[#6B7280] mb-8 leading-relaxed font-light">
+          <p className="text-base sm:text-lg md:text-xl text-[#6B7280] mb-8 leading-relaxed font-light">
             ADHSV represents a new generation of wound healing technology that combines:
           </p>
         </motion.div>
@@ -45,13 +45,13 @@ const Science = () => {
             ))}
           </div>
 
-          <p className="text-lg text-[#6B7280] mb-14 leading-relaxed font-light">
+          <p className="text-base sm:text-lg text-[#6B7280] mb-10 md:mb-14 leading-relaxed font-light">
             The goal is to create safer, faster, and eco-friendly wound management solutions for hospitals, emergency care, home first-aid, and chronic wound patients.
           </p>
 
-          <div className="bg-white border border-[#F3F4F6] rounded-[2rem] p-8 md:p-10 shadow-sm">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#1F2937]">Short Summary</h2>
-            <p className="text-lg text-[#6B7280] leading-relaxed font-light">
+          <div className="bg-white border border-[#F3F4F6] rounded-[1.5rem] md:rounded-[2rem] p-6 sm:p-8 md:p-10 shadow-sm">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-[#1F2937]">Short Summary</h2>
+            <p className="text-base sm:text-lg text-[#6B7280] leading-relaxed font-light">
               ADHSV Fast-Adherent Burn Dressing is a biodegradable nano-hydrogel wound care solution scientifically developed to provide antimicrobial protection, moisture-balanced healing, reduced pain, and faster skin recovery for burns and wounds. Using advanced hydrogel technology and biodegradable biopolymers, the dressing supports effective healing while minimizing infection risk and environmental impact.
             </p>
           </div>

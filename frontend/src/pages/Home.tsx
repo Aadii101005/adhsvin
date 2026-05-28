@@ -42,8 +42,8 @@ const Home = () => {
   return (
     <div className="w-full bg-[#F7F7F5] min-h-screen text-[#1F2937]">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="relative pt-28 sm:pt-32 pb-14 md:pb-16 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,18 +54,18 @@ const Home = () => {
               <span className="text-[#D32F2F] text-xs font-bold tracking-widest uppercase">Wound Care, Reimagined</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] mb-6 md:mb-8 tracking-tight">
               <span className="block text-[#1F2937]">Fast-adherent</span>
               <span className="block text-[#1F2937]">dressings.</span>
               <span className="block text-[#D32F2F]">Honest materials.</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-[#6B7280] mb-12 max-w-lg leading-relaxed font-light">
+            <p className="text-base sm:text-lg md:text-xl text-[#6B7280] mb-8 md:mb-12 max-w-lg leading-relaxed font-light">
               adhsv.in builds sterile wound and burn dressings designed to bond instantly, minimise trauma, and keep first-aid simple — without any synthetic chemicals.
             </p>
             
-            <div className="flex flex-wrap items-center gap-4 mb-12">
-              <Link to="/products" className="bg-[#D32F2F] hover:bg-[#B71C1C] text-white px-8 py-4 rounded-full font-semibold transition-all flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-4 mb-10 md:mb-12">
+              <Link to="/products" className="bg-[#D32F2F] hover:bg-[#B71C1C] text-white px-8 py-4 rounded-full font-semibold transition-all flex items-center justify-center gap-2">
                 Explore products <ArrowRight size={18} />
               </Link>
               <button
@@ -83,7 +83,7 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="relative h-[450px] md:h-[600px] w-full bg-[#FAF0ED] rounded-[2rem] md:rounded-[3rem] shadow-inner overflow-hidden flex items-center justify-center"
+            className="relative h-[360px] sm:h-[450px] md:h-[600px] w-full bg-[#FAF0ED] rounded-[1.5rem] md:rounded-[3rem] shadow-inner overflow-hidden flex items-center justify-center"
           >
             <div className="relative w-[90%] md:w-[85%] h-full flex items-center justify-center">
               {/* Left Card - Red Sachet (Front) */}
@@ -110,11 +110,11 @@ const Home = () => {
 
       {isRequestFormOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4 py-8">
-          <div className="w-full max-w-3xl rounded-[2rem] bg-white p-8 shadow-2xl border border-[#E5E7EB]">
-            <div className="flex items-center justify-between mb-6">
+          <div className="w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-[1.5rem] md:rounded-[2rem] bg-white p-5 sm:p-8 shadow-2xl border border-[#E5E7EB]">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
               <div>
                 <p className="text-xs uppercase tracking-widest text-[#D32F2F] font-bold">Request Samples</p>
-                <h2 className="text-3xl font-bold text-[#1F2937]">Send your details</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#1F2937]">Send your details</h2>
               </div>
               <button
                 type="button"
@@ -170,7 +170,7 @@ const Home = () => {
       {/* Certification Ribbon */}
       <div className="w-full border-y border-[#E5E7EB] bg-[#F7F7F5] py-4 overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="flex justify-between items-center text-xs font-medium text-[#6B7280] tracking-widest uppercase">
+          <div className="flex flex-wrap justify-center md:justify-between items-center gap-3 text-[11px] sm:text-xs font-medium text-[#6B7280] tracking-widest uppercase text-center">
             <span>ISO 13485 Process</span>
             <span className="hidden md:inline">•</span>
             <span>CE-Ready Packaging</span>
@@ -185,14 +185,14 @@ const Home = () => {
       </div>
 
       {/* Features Section */}
-      <section className="py-24 md:py-32">
-        <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <section className="py-20 md:py-32">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           <div>
             <div className="flex items-center gap-4 mb-6">
               <div className="h-px w-12 bg-[#D32F2F]"></div>
               <span className="text-[#D32F2F] text-xs font-bold tracking-widest uppercase">Why adhsv</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight max-w-md text-[#1F2937]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight max-w-md text-[#1F2937]">
               Built around the moment a wound is dressed.
             </h2>
             <div className="mt-10 max-w-md rounded-[2rem] overflow-hidden border border-[#F3F4F6] bg-white shadow-xl">
@@ -229,9 +229,9 @@ const Home = () => {
       </section>
 
       {/* In Practice Segment */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="order-2 lg:order-1 h-[500px] w-full rounded-[2rem] overflow-hidden bg-white p-8 border border-[#F3F4F6]">
+      <section className="py-14 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="order-2 lg:order-1 h-[320px] sm:h-[420px] md:h-[500px] w-full rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-white p-4 sm:p-8 border border-[#F3F4F6]">
             <img 
               src={InPracticeImg} 
               alt="Medical professional applying dressing" 
@@ -244,7 +244,7 @@ const Home = () => {
               <div className="h-px w-12 bg-[#D32F2F]"></div>
               <span className="text-[#D32F2F] text-xs font-bold tracking-widest uppercase">In Practice</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-[#1F2937]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-[#1F2937]">
               From clinic counters to ambulances.
             </h2>
             <p className="text-lg text-[#6B7280] mb-8 leading-relaxed max-w-lg">
@@ -258,15 +258,15 @@ const Home = () => {
       </section>
 
       {/* Bulk Order CTA */}
-      <section className="py-16 px-6 md:px-12 pb-32">
-        <div className="container mx-auto bg-[#D32F2F] rounded-[2rem] p-12 md:p-20 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-10 shadow-2xl shadow-red-900/20">
+      <section className="py-14 px-4 sm:px-6 md:px-12 pb-24 md:pb-32">
+        <div className="container mx-auto bg-[#D32F2F] rounded-[1.5rem] md:rounded-[2rem] p-7 sm:p-10 md:p-20 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-10 shadow-2xl shadow-red-900/20">
           <div className="max-w-xl">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Stock smarter first-aid for your team.</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white">Stock smarter first-aid for your team.</h2>
             <p className="text-white/80 text-lg">
               Bulk orders, custom kit configurations and distributor enquiries — we ship across India.
             </p>
           </div>
-          <Link to="/contact" className="bg-white text-[#1F2937] px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-100 transition-colors whitespace-nowrap">
+          <Link to="/contact" className="w-full sm:w-auto bg-white text-[#1F2937] px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors whitespace-nowrap">
             Talk to us <ArrowRight size={18} />
           </Link>
         </div>
