@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #D32F2F;
+  --color-primary-dark: #B71C1C;
+  --color-secondary: #D97706;
+  --color-accent: #1F2937;
+  --color-bg-light: #F7F7F5;
+  --color-bg-dark: #1F2937;
+  --color-surface: #ffffff;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F7F7F5] text-slate-900 font-sans antialiased overflow-x-hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-[#F7F7F5]/80 backdrop-blur-md border-b border-black/5;
+  }
+  .glass-dark {
+    @apply bg-slate-900/90 backdrop-blur-md border border-slate-700/50 shadow-xl text-white;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+}
