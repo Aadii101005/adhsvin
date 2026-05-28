@@ -14,9 +14,9 @@ const Footer = () => {
             Next-generation biodegradable hydrogel-based wound healing. Advanced care for a sustainable future.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-primary transition-colors"><Globe size={20} /></a>
-            <a href="#" className="hover:text-primary transition-colors"><LinkIcon size={20} /></a>
-            <a href="#" className="hover:text-primary transition-colors"><Mail size={20} /></a>
+            <a href="https://adhsv.in" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors"><Globe size={20} /></a>
+            <a href="https://adhsv.in" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors"><LinkIcon size={20} /></a>
+            <a href="mailto:info@adhsv.in" className="hover:text-primary transition-colors"><Mail size={20} /></a>
           </div>
         </div>
 
@@ -24,9 +24,7 @@ const Footer = () => {
           <h4 className="text-white font-semibold mb-4">Product</h4>
           <ul className="space-y-2 text-sm">
             <li><Link to="/products" className="hover:text-primary transition-colors">Shop</Link></li>
-            <li><a href="#technology" className="hover:text-primary transition-colors">Technology</a></li>
-            <li><a href="#benefits" className="hover:text-primary transition-colors">Benefits</a></li>
-            <li><a href="#reviews" className="hover:text-primary transition-colors">Reviews</a></li>
+            <li><Link to="/contact" className="hover:text-primary transition-colors">Reviews</Link></li>
           </ul>
         </div>
 

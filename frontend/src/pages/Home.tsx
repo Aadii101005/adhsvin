@@ -6,6 +6,7 @@ import { Timer, Shield, Leaf, Sparkles, ArrowRight } from 'lucide-react'
 import InPracticeImg from '../utils/images/image.png'
 import HeroImg1 from '../utils/images/image copy.png'
 import HeroImg2 from '../utils/images/image copy 2.png'
+import Adhsv5Img from '../utils/images/adhsv 5.png'
 
 type RequestForm = {
   name: string
@@ -76,20 +77,6 @@ const Home = () => {
               </button>
             </div>
             
-            <div className="border-t border-[#E5E7EB] pt-8 flex gap-12">
-              <div>
-                <div className="text-xs text-[#6B7280] uppercase tracking-wider mb-1">Adheres In</div>
-                <div className="text-3xl font-bold text-[#1F2937]">4s</div>
-              </div>
-              <div>
-                <div className="text-xs text-[#6B7280] uppercase tracking-wider mb-1">Sterile</div>
-                <div className="text-3xl font-bold text-[#1F2937]">100%</div>
-              </div>
-              <div>
-                <div className="text-xs text-[#6B7280] uppercase tracking-wider mb-1">Synthetics</div>
-                <div className="text-3xl font-bold text-[#1F2937]">0</div>
-              </div>
-            </div>
           </motion.div>
           
           <motion.div 
@@ -208,6 +195,9 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl font-bold leading-tight max-w-md text-[#1F2937]">
               Built around the moment a wound is dressed.
             </h2>
+            <div className="mt-10 max-w-md rounded-[2rem] overflow-hidden border border-[#F3F4F6] bg-white shadow-xl">
+              <img src={Adhsv5Img} alt="ADHSV product" className="w-full object-cover" />
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '../redux/store'
 import { logout } from '../redux/slices/authSlice'
@@ -37,11 +37,37 @@ const Navbar = () => {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 font-medium text-sm">
-          <Link to="/" className="text-[#6B7280] hover:text-[#1F2937] transition-colors">Home</Link>
-          <Link to="/products" className="text-[#6B7280] hover:text-[#1F2937] transition-colors">Products</Link>
-          <Link to="/science" className="text-[#6B7280] hover:text-[#1F2937] transition-colors">Science</Link>
-          <Link to="/about" className="text-[#6B7280] hover:text-[#1F2937] transition-colors">About</Link>
-          <Link to="/contact" className="text-[#6B7280] hover:text-[#1F2937] transition-colors">Contact</Link>
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) => `transition-colors ${isActive ? 'text-[#D32F2F] font-semibold' : 'text-[#6B7280] hover:text-[#1F2937]'}`}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/products"
+            className={({ isActive }) => `transition-colors ${isActive ? 'text-[#D32F2F] font-semibold' : 'text-[#6B7280] hover:text-[#1F2937]'}`}
+          >
+            Products
+          </NavLink>
+          <NavLink
+            to="/science"
+            className={({ isActive }) => `transition-colors ${isActive ? 'text-[#D32F2F] font-semibold' : 'text-[#6B7280] hover:text-[#1F2937]'}`}
+          >
+            Science
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => `transition-colors ${isActive ? 'text-[#D32F2F] font-semibold' : 'text-[#6B7280] hover:text-[#1F2937]'}`}
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => `transition-colors ${isActive ? 'text-[#D32F2F] font-semibold' : 'text-[#6B7280] hover:text-[#1F2937]'}`}
+          >
+            Contact
+          </NavLink>
         </nav>
 
         <div className="hidden md:flex items-center gap-6">
@@ -94,9 +120,9 @@ const Navbar = () => {
 
               <div className="h-px bg-black/5 my-2"></div>
 
-              <Link to="/cart" className="flex justify-between items-center text-[#1F2937]" onClick={() => setIsMobileMenuOpen(false)}>
-                Cart <span className="bg-[#D32F2F] text-white px-2 py-0.5 rounded-full text-xs">{cartItems.length} items</span>
-              </Link>
+              <NavLink to="/products" className={({ isActive }) => `flex justify-between items-center ${isActive ? 'text-[#D32F2F]' : 'text-[#1F2937]'}`} onClick={() => setIsMobileMenuOpen(false)}>
+                Shop <span className="bg-[#D32F2F] text-white px-2 py-0.5 rounded-full text-xs">{cartItems.length} items</span>
+              </NavLink>
 
               {isAuthenticated ? (
                 <>

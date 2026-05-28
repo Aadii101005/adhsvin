@@ -5,9 +5,10 @@ import { ShoppingBag, Star, ArrowRight } from 'lucide-react'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../redux/slices/cartSlice'
 import { toast } from 'sonner'
+import Adhsv5Img from '../utils/images/adhsv 5.png'
 
 const PRODUCTS = [
-  { id: 1, name: 'ADHSV Wound Dressing Sachet (Red)', price: 4.99, image: '/images/wound-sachet.jpg', rating: 4.9, category: 'Wound Care' },
+  { id: 1, name: 'ADHSV Fast-Adherent Burn Dressing', price: 8.99, image: Adhsv5Img, rating: 4.9, category: 'Wound Care' },
   { id: 2, name: 'ADHSV Burn Dressing Sachet (Orange)', price: 4.99, image: '/images/burn-sachet.jpg', rating: 4.8, category: 'Burn Care' },
   { id: 3, name: 'ADHSV Clinical Combo Pack', price: 129.99, image: '/images/in-practice.jpg', rating: 5.0, category: 'Clinical' }
 ]
@@ -38,6 +39,9 @@ const Products = () => {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Shop adhsv.</h1>
             <p className="text-[#6B7280] max-w-xl text-lg font-light">Advanced hydrogel solutions for every healing need. Developed by biotech experts.</p>
+            <div className="mt-8 rounded-[2rem] overflow-hidden border border-[#E5E7EB] bg-white shadow-xl max-w-xs">
+              <img src={Adhsv5Img} alt="ADHSV featured product" className="w-full object-cover" />
+            </div>
           </motion.div>
           
           <div className="flex gap-2 overflow-x-auto pb-2 w-full md:w-auto">
