@@ -1,4 +1,6 @@
-import { Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Products from './pages/Products'
@@ -19,8 +21,29 @@ import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import ProtectedRoute from './components/ProtectedRoute'
 import AdminRoute from './components/AdminRoute'
+import { RootState } from './redux/store'
 
 function App() {
+  const navigate = useNavigate()
+  const location = useLocation()
+  const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated)
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      return
+    }
+
+    const loginReminder = window.setInterval(() => {
+      const isAuthPage = location.pathname === '/login' || location.pathname === '/register'
+
+      if (!isAuthPage) {
+        navigate('/login')
+      }
+    }, 5 * 60 * 1000)
+
+    return () => window.clearInterval(loginReminder)
+  }, [isAuthenticated, location.pathname, navigate])
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>

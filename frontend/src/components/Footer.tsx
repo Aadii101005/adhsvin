@@ -11,7 +11,7 @@ const Footer = () => {
             <img src={logo} alt="ADHSV Logo" className="absolute top-1/2 left-0 w-full h-auto -translate-y-1/2 pointer-events-none" />
           </Link>
           <p className="text-sm leading-relaxed mb-6">
-            Next-generation biodegradable hydrogel-based wound healing. Advanced care for a sustainable future.
+            Next-generation healing & Advanced care for a sustainable future.
           </p>
           <div className="flex gap-4">
             <a href="https://adhsv.in" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors"><Globe size={20} /></a>

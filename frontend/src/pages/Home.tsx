@@ -266,9 +266,9 @@ const Home = () => {
               Bulk orders, custom kit configurations and distributor enquiries — we ship across India.
             </p>
           </div>
-          <button className="bg-white text-[#1F2937] px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-100 transition-colors whitespace-nowrap">
+          <Link to="/contact" className="bg-white text-[#1F2937] px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-100 transition-colors whitespace-nowrap">
             Talk to us <ArrowRight size={18} />
-          </button>
+          </Link>
         </div>
       </section>
     </div>
