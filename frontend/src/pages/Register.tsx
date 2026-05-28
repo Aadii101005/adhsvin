@@ -39,7 +39,7 @@ const Register = () => {
     <div className="min-h-screen flex items-center justify-center bg-slate-50 pt-20 px-4">
       <div className="bg-white p-8 md:p-10 rounded-3xl shadow-xl shadow-slate-200/50 w-full max-w-md border border-slate-100">
         <div className="flex justify-center mb-6">
-          <img src={logo} alt="ADHSV Logo" className="h-12 w-12" />
+          <img src={logo} alt="ADHSV Logo" className="h-20 w-24" />
         </div>
         <h2 className="text-3xl font-bold font-heading text-center mb-2">Create Account</h2>
         <p className="text-slate-500 text-center mb-8">Join the sustainable healing revolution</p>

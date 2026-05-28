@@ -39,7 +39,7 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-slate-50 pt-20 px-4">
       <div className="bg-white p-8 md:p-10 rounded-3xl shadow-xl shadow-slate-200/50 w-full max-w-md border border-slate-100">
         <div className="flex justify-center mb-6">
-          <img src={logo} alt="ADHSV Logo" className="h-12 w-12" />
+          <img src={logo} alt="ADHSV Logo" className="h-20 w-24" />
         </div>
         <h2 className="text-3xl font-bold font-heading text-center mb-2">Welcome Back</h2>
         <p className="text-slate-500 text-center mb-8">Sign in to manage your orders</p>
@@ -76,11 +76,11 @@ const Login = () => {
         <p className="text-center mt-6 text-slate-500 text-sm">
           Don't have an account? <Link to="/register" className="text-primary font-medium hover:underline">Sign up</Link>
         </p>
-        <div className="mt-6 p-4 bg-blue-50 text-blue-800 rounded-xl text-xs">
+        {/* <div className="mt-6 p-4 bg-blue-50 text-blue-800 rounded-xl text-xs">
           <strong>Demo credentials:</strong><br />
           Admin: admin@adhsv.com / admin<br />
           User: anything else
-        </div>
+        </div> */}
       </div>
     </div>
   )

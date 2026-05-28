@@ -55,8 +55,8 @@ const Navbar = () => {
           </Link>
 
           {!isAuthenticated && (
-            <Link to="/login" aria-label="Login" className="flex items-center justify-center bg-white border-2 border-[#D32F2F] w-12 h-12 rounded-full shadow-sm hover:shadow-md transition-all">
-              <img src={logo} alt="ADHSV" className="h-6 w-6 rounded-full" />
+            <Link to="/login" aria-label="Login" className="text-[#6B7280] hover:text-[#1F2937] transition-colors">
+              <User className="h-5 w-5" />
             </Link>
           )}
 
@@ -104,8 +104,8 @@ const Navbar = () => {
                   <button onClick={() => { handleLogout(); setIsMobileMenuOpen(false); }} className="text-left text-[#D32F2F]">Logout</button>
                 </>
               ) : (
-                <Link to="/login" aria-label="Login" className="flex items-center justify-center bg-white border-2 border-[#D32F2F] w-12 h-12 rounded-full text-center shadow-sm hover:shadow-md" onClick={() => setIsMobileMenuOpen(false)}>
-                  <img src={logo} alt="ADHSV" className="h-6 w-6 rounded-full" />
+                <Link to="/login" aria-label="Login" className="text-[#6B7280] hover:text-[#1F2937] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                  <User className="h-5 w-5" />
                 </Link>
               )}
             </div>
